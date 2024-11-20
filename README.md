@@ -23,7 +23,8 @@ The main findings of this project demonstrate that expanding diversity in the wo
 #### Rationale
 
 Increasing access to job opportunities for minorities and women is crucial for reducing well- documented race, ethnicity, and gender gaps in the economy. 		
-Bias Towards the Majority Class: Machine learning models, especially those that optimize for accuracy, may become biased toward predicting the majority class. A model can achieve a high accuracy simply by predicting the majority class for all samples, even though it fails to capture the minority class properly.
+
+**Bias Towards the Majority Class:** Machine learning models, especially those that optimize for accuracy, may become biased toward predicting the majority class. A model can achieve a high accuracy simply by predicting the majority class for all samples, even though it fails to capture the minority class properly.
 Example: In a dataset with 95% negative class and 5% positive class, a model that predicts "negative" for every instance would have 95% accuracy but would fail to identify any of the positive cases, which might be the most critical part of the problem (e.g., detecting fraud, rare diseases).
 
 #### Research Question
