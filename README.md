@@ -1,21 +1,34 @@
 # Hiring Opportunities for Minorities 
+Dario Betancourt
 
-### Overview
+#### Executive summary
 
 Increasing access to job opportunity for minorities and women is crucial for reducing well- documented race, ethnicity, and gender gaps in the economy. While a proliferation of initiatives related to diversity, equity, and inclusion speak to firms’ interest in these issues, a persistent doubt remains: how can firms increase diversity without sacrificing quality? (Danielle Li, et al June 1, 2014).
 
 The main findings of this project demonstrate that expanding diversity in the workplace does not necessarily involve a tradeoff between equity and efficiency. In particular, current recruiting practices seem to fall short of their full potential, leaving significant room for new ML tools to simultaneously enhance hiring rates and demographic representation.
 
 ### Content Index 
+- [Rationale](#rationale)
+- [Research Question](#research-question)
 - [Data](#data)
-- [Business Objective](#business-objective)
+- [Methodology](#methodology)
 - [Baseline Model](#baseline-model)
-- [Techniques to Handle Imbalanced Classes](#techniques-to-handle-imbalanced-classes)
 - [Comparing Models](#comparing-models)
 - [Permutation Importance](#permutation-importance)
 - [Adjusting the performance metrics](#adjusting-the-performance-metrics)
 - [Next Steps and Recommendations](#next-steps-and-recommendations)
 
+#### Rationale
+
+Increasing access to job opportunities for minorities and women is crucial for reducing well- documented race, ethnicity, and gender gaps in the economy. 		
+Bias Towards the Majority Class: Machine learning models, especially those that optimize for accuracy, may become biased toward predicting the majority class. A model can achieve a high accuracy simply by predicting the majority class for all samples, even though it fails to capture the minority class properly.
+Example: In a dataset with 95% negative class and 5% positive class, a model that predicts "negative" for every instance would have 95% accuracy but would fail to identify any of the positive cases, which might be the most critical part of the problem (e.g., detecting fraud, rare diseases).
+
+#### Research Question
+
+How to reduce the bias against Black and Hispanic in the hiring process without sacrificing quality? 
+
+Maintaing quality by considering the most optimistic assessment of their hiring potential. That is, among applicants with **the same predicted hiring potential** the exploration will give opportunity to applicants in the minorities.
 
 ### Data:
 The dataset is sourced from Kaggle.
@@ -25,9 +38,23 @@ This dataset provides insights into factors influencing hiring decisions. Each r
 
 The imbalance in ethnicity within the dataset introduces a bias, disproportionately affecting minority groups' chances of being hired. This underrepresentation may lead the model to favor the majority group, ultimately reducing fairness in hiring predictions.
 
-### Business Objective:
+#### Methodology
 
-Reduce the bias in the models against Black and Hispanic in the hiring process without sacrificing quality by considering the most optimistic assessment of their hiring potential. That is, among applicants with **the same predicted hiring potential** the exploration will give opportunity to applicants in the minorities.
+1. Set the baseline with Logistic Regression (LASSO)
+2. Analyze three resampling methods for balancing datasets
+   - Oversampling the minority class using SMOTE
+   - Undersampling the majority class with RandomUnderSampler
+   - Adjusting Class Weights as a parameter for the model
+3. Each method is applied to four selecting models
+    - LogisticRegression 
+    - SVC 
+    - DecisionTreeClassifier
+    - RandomForest 
+    therefore there are 12 models 
+4. Get the metrics accuracy, precision, recall, and ROC for train and test data
+5. Compare the test predictions with original data and the baseline - plot the results in a pie
+6. Adjust the metrics with comparing Cumulative Gain Curves (LIFT charts) and ROC
+7. Review the permutation importance for each model, to demonstrate the balancing methods do not affect the features importance
 
 ### Baseline Model:
 
@@ -37,21 +64,6 @@ Compared with the original data the number of Black and Hispanic people went fro
 The second model combines Logistic Regression with LASSO regularization has an accuracy 0.81, and an increase in the Back and Hispanic participation of 0.8% and 0.7% as shown in the graph below. Also train data shows how the model can reduce the participation of the Hispanic people by 0.6%.
 
 ![LASSO Baseline](/images/1LASSOBaseline.png)
-
-### Techniques to Handle Imbalanced Classes
-
-There are 3 major techniques in this project to work with the unbalanced dataset: 
-
-   - Oversampling the minority class using SMOTE
-   - Undersampling the majority class with RandomUnderSampler
-   - Adjusting Class Weights as a parameter for the model
-
-These 3 balancing methods are used with 4 algorithms:
-    - LogisticRegression 
-    - SVC 
-    - DecisionTreeClassifier
-    - RandomForest 
-    therefore there are 12 models 
 
 ### Comparing Models 
 
