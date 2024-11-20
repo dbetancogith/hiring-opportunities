@@ -62,11 +62,11 @@ These 3 balancing methods are used with 4 algorithms:
 
     The graphic below shows metrics comparison for the models with SMOTE 
    
-    ![metric-smote.png](attachment:70977059-164a-4d5c-93f4-2f916b816427.png)
+    ![metric-smote](/images/metric-smote.png)
 
     According to these results, SMOTE did not sacrifice the performance of the model and the Black and Hispanic hired people increased from 5.0% to 6.2% and 7.0% to 9.3% on the SVC respectively. **The increase was even better on the Decision Tree Classifier model Black hired people increase on 2.5% to 7.5% and Hispanic on 4.3% to 11.3%**
 
-    ![pie-smote.png](attachment:abae8e4c-a879-4886-9d31-665a9255a251.png)
+    ![pie-smote](/images/pie-smote.png)
 
 3. Under-Sampling - RandomUnderSampler. These are the results for this technique:
     - Random forest has the highest ROC value of 0.88 followed by Logistic Regression with 0.86
@@ -75,11 +75,11 @@ These 3 balancing methods are used with 4 algorithms:
 
     The graphic below shows metrics comparison for the models with Under-Sampling 
 
-    ![metric-under-sampling.png](attachment:0af38587-e3ef-4ec1-b5d1-4c6a6f7f90b5.png)
+    ![metric-under-sampling](/images/metric-under-sampling.png)
 
     **Under-Sampling results showed great performance in all models, and Black and Hispanic hired people increased from 5.0% to 6.5% and 7.0% to 10.1% respectively with Random Forest.** The Decision Tree Classifier showed an increase of 2.7% for Black candidates to 7.9% and 2.3% for Hispanic to 9.3%
 
-    ![pie-under-sampling.png](attachment:0398e467-fff7-4bb8-aae7-7d3dca665450.png)
+    ![pie-under-sampling](/images/pie-under-sampling.png)
 
 3. Balancing Weights all 4 algorithms used accept the parameter class_weight set to ‘balanced’ here are the results:
    - Random forest has the highest ROC value of 0.89 followed by SVC with 0.86
@@ -88,18 +88,18 @@ These 3 balancing methods are used with 4 algorithms:
 
     The graphic below shows metrics comparison for the models with Balancing Weights 
 
-    ![metric-balancing.png](attachment:ae7240f6-ae3a-4229-bef6-095b6e517117.png)
+    ![metric-balancing](/images/metric-balancing.png)
 
     Logistic Regression showed the biggest increase fo Black and Hispanic candidates with 6.4% and 9.0%, these results showed that for increasing the participation of Black and Hispanic candidates and in general underrepresented classes it is better to combine this method with a resampling technique. 
 
-    ![pie-balancing.png](attachment:a5fa0d96-5eff-4ff8-a6bb-41ff7b00b022.png)
+    ![pie-balancing](/images/pie-balancing.png)
     
 ### Permutation Importance
 This machine learning technique is used to assess the importance of individual features within a model by randomly shuffling the values of a single feature and observing how much the model's performance degrades. 
 
 The graphs below show that the resampling or balancing of the data did not affect the importance of the features (SMOTE). 
 
-![7permutation.png](attachment:180b4c04-4b88-4772-81e8-3945c4df458b.png)
+![7permutation](/images/7permutation.png)
 
 ### Adjusting the performance metrics
 
@@ -112,19 +112,19 @@ The ROC curve plots the True Positive Rate (TPR) (also called sensitivity or rec
 Next, The Lift Curve is derived from the cumulative gains chart; the values on the y axis correspond to the ratio of the cumulative gain for each curve to the baseline. Thus, the lift at 10% for the category Yes is 50%/10% = ~5.0 for most models. It provides another way of looking at the information in the cumulative gains chart.
 
 SMOTE
-![8roc-curves.png](attachment:23107838-ec23-478d-8d54-7e300f97f3c4.png)
+![8roc-curves](/images/8roc-curves.png)
 
 Plotting The Calibration Curves of a classifier is useful for determining whether or not you can interpret their predicted probabilities directly as a confidence level. For instance, a well-calibrated binary classifier should classify the samples such that for samples to which it gave a score of 0.8, around 80% should actually be from the positive class.
 
-![9calibration.png](attachment:e963a703-5f83-4405-996c-4f1fbf9d679d.png)
+![9calibration](/images/9calibration.png)
     
 Finally The Confusion Matrix for each model shows the values for TP, FP and FN, in this case the idea is to increase the number of people in the campaign that will say Yes and reduce the number of calls.
 
-![10conf-smote.png](attachment:3bd69f01-8af1-472e-a954-76ac13b3706c.png)
+![10conf-smote](/images/10conf-smote.png)
 
-![11conf-under.png](attachment:bd8a9489-91ac-435a-9151-48b22e86284b.png)
+![11conf-under](/images/11conf-under.png)
 
-![12conf-balancing.png](attachment:2b6d1751-44e6-4cde-943c-926ba2df2dca.png)
+![12conf-balancing](/images/12conf-balancing.png)
 
 ### Next Steps and Recommendations
  
