@@ -17,6 +17,8 @@ The main findings of this project demonstrate that expanding diversity in the wo
 - [Permutation Importance](#permutation-importance)
 - [Adjusting the performance metrics](#adjusting-the-performance-metrics)
 - [Next Steps and Recommendations](#next-steps-and-recommendations)
+- [Outline of project](#outline-of-project)
+- [Contact and Further Information](#contact-and-further-information)
 
 #### Rationale
 
@@ -148,3 +150,14 @@ Finally The Confusion Matrix for each model shows the values for TP, FP and FN, 
 - One of the algorithms to try should be the Upper Confidence Bound - Bandit
 - Since most ATS systems have the ML models at the beginning of the funnel, it would be interesting to run these models with a dataset of selection for interview, and track the people hired at end. 
 - Tunning the algorithms and research on some of the behaiviors such the the one for decision tress classification in the calibrarion graphic for SMOTE models
+
+#### Outline of project
+
+- Link to notebook [Hiring Opportunities](https://github.com/dbetancogith/hiring-opportunities/blob/main/capV12.ipynb)
+- Dataset [Dataset](https://www.kaggle.com/datasets/rabieelkharoua/predicting-hiring-decisions-in-recruitment-data)
+- Download the dataset [Download](https://github.com/dbetancogith/hiring-opportunities/blob/main/data/Job_Applicants_by_Ethnicity.csv)
+
+##### Contact and Further Information
+
+Email: dariobz3071@gmail.com
+
