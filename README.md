@@ -36,7 +36,7 @@ Compared with the original data the number of Black and Hispanic people went fro
 
 The second model combines Logistic Regression with LASSO regularization has an accuracy 0.81, and an increase in the Back and Hispanic participation of 0.8% and 0.7% as shown in the graph below. Also train data shows how the model can reduce the participation of the Hispanic people by 0.6%.
 
-![1LASSOBaseline.png](attachment:c44ee6fd-91d0-4148-8ec0-356b48ea180f.png)
+![LASSO Baseline](/images/1LASSOBaseline.png)
 
 ### Techniques to Handle Imbalanced Classes
 
