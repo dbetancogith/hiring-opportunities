@@ -55,7 +55,7 @@ These 3 balancing methods are used with 4 algorithms:
 
 ### Comparing Models 
 
-1. Running the models with SMOTE - Synthetic Minority Over-sampling Technique - the results are:
+**1. Running the models with SMOTE - Synthetic Minority Over-sampling Technique - the results are:**
    - Random forest has the highest ROC value of 0.89 followed by SVC with 0.87
    - Random forest accuracy 0.90, SVC accuracy 0.85
    - The fastest model was Logistic Regression with 0.008
@@ -68,7 +68,7 @@ These 3 balancing methods are used with 4 algorithms:
 
     ![pie-smote](/images/pie-smote.png)
 
-3. Under-Sampling - RandomUnderSampler. These are the results for this technique:
+**2. Under-Sampling - RandomUnderSampler. These are the results for this technique:**
     - Random forest has the highest ROC value of 0.88 followed by Logistic Regression with 0.86
     - Random forest accuracy 0.86, Logistic Regression accuracy 0.80
     - The fastest model was Decision Tree with 0.003
@@ -81,7 +81,7 @@ These 3 balancing methods are used with 4 algorithms:
 
     ![pie-under-sampling](/images/pie-under-sampling.png)
 
-3. Balancing Weights all 4 algorithms used accept the parameter class_weight set to ‘balanced’ here are the results:
+**3. Balancing Weights all 4 algorithms used accept the parameter class_weight set to ‘balanced’ here are the results:**
    - Random forest has the highest ROC value of 0.89 followed by SVC with 0.86
    - Random forest accuracy 0.89, SVC accuracy 0.86
    - The fastest model was Decision Tree Classification with 0.003
