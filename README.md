@@ -146,9 +146,7 @@ Plotting The Calibration Curves of a classifier is useful for determining whethe
 Finally The Confusion Matrix for each model shows the values for TP, FP and FN, in this case the idea is to increase the number of people in the campaign that will say Yes and reduce the number of calls.
 
 ![10conf-smote](/images/10conf-smote.png)
-
 ![11conf-under](/images/11conf-under.png)
-
 ![12conf-balancing](/images/12conf-balancing.png)
 
 ### Next Steps and Recommendations
