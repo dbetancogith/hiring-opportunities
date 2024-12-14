@@ -60,11 +60,11 @@ The imbalance in ethnicity within the dataset introduces a bias, disproportionat
     - SVC 
     - DecisionTreeClassifier
     - RandomForest 
-    therefore there are 12 models 
-4. Get the metrics accuracy, precision, recall, and ROC for train and test data
-5. Compare the test predictions with original data and the baseline - plot the results in a pie
-6. Adjust the metrics with comparing Cumulative Gain Curves (LIFT charts) and ROC
-7. Review the permutation importance for each model, to demonstrate the balancing methods do not affect the features importance
+4. Therefore there are 14 models total 
+5. Get the metrics accuracy, precision, recall, and ROC for train and test data
+6. Compare the test predictions with original data and the baseline - plot the results in a pie
+7. Adjust the metrics with comparing Cumulative Gain Curves (LIFT charts) and ROC
+8. Review the permutation importance for each model, to demonstrate the balancing methods do not affect the features importance
 
 ### Baseline Model:
 
