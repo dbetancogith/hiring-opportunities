@@ -1,11 +1,17 @@
 # Hiring Opportunities for Minorities 
 Dario Betancourt
 
-#### Executive summary
+### Executive summary
 
-Increasing access to job opportunity for minorities and women is crucial for reducing well- documented race, ethnicity, and gender gaps in the economy. While a proliferation of initiatives related to diversity, equity, and inclusion speak to firms’ interest in these issues, a persistent doubt remains: how can firms increase diversity without sacrificing quality? (Danielle Li, et al June 1, 2014).
+Increasing access to job opportunities for minorities and women is critical for addressing the well-documented disparities in race, ethnicity, and gender within the economy. Despite the proliferation of initiatives focused on diversity, equity, and inclusion (DEI), many organizations still grapple with the question: How can companies promote diversity without compromising the quality and efficiency of their workforce? (Li et al., 2014).
 
-The main findings of this project demonstrate that expanding diversity in the workplace does not necessarily involve a tradeoff between equity and efficiency. In particular, current recruiting practices seem to fall short of their full potential, leaving significant room for new ML tools to simultaneously enhance hiring rates and demographic representation.
+This project explores the potential of machine learning (ML) to enhance both hiring efficiency and demographic representation. Our findings demonstrate that fostering diversity in the workplace does not inherently require a tradeoff between equity and performance. In fact, the current state of recruitment practices often underutilizes the power of advanced ML techniques, leaving significant opportunities for improvement.
+
+A key aspect of this research involves class balancing—a technique designed to address biases in training data that can skew hiring outcomes against minority groups. By applying ML tools to correct for these imbalances, organizations can make hiring decisions that are more equitable while maintaining or even enhancing the quality of their workforce.
+
+Moreover, we argue that diversity in hiring is not just about equity in the short term. Over time, diverse teams will not only improve efficiency but also drive innovation. Research consistently shows that teams with diverse backgrounds bring unique perspectives, which are critical for problem-solving, creativity, and innovation. In the long run, a more diverse workforce will be better positioned to tackle complex challenges and contribute to sustainable business growth.
+
+This project highlights the transformative potential of ML to refine recruitment processes and create more inclusive, innovative workplaces. By integrating data-driven, balanced hiring practices, companies can foster a culture of diversity that benefits both employees and organizations, leading to a more efficient, innovative, and inclusive workforce.
 
 ### Content Index 
 - [Rationale](#rationale)
@@ -20,20 +26,21 @@ The main findings of this project demonstrate that expanding diversity in the wo
 - [Outline of project](#outline-of-project)
 - [Contact and Further Information](#contact-and-further-information)
 
-#### Rationale
+### Rationale
 
 Increasing access to job opportunities for minorities and women is crucial for reducing well- documented race, ethnicity, and gender gaps in the economy. 		
 
 **Bias Towards the Majority Class:** Machine learning models, especially those that optimize for accuracy, may become biased toward predicting the majority class. A model can achieve a high accuracy simply by predicting the majority class for all samples, even though it fails to capture the minority class properly.
 Example: In a dataset with 95% negative class and 5% positive class, a model that predicts "negative" for every instance would have 95% accuracy but would fail to identify any of the positive cases, which might be the most critical part of the problem (e.g., detecting fraud, rare diseases).
 
-#### Research Question
+### Research Question
 
 How to reduce the bias against Black and Hispanic in the hiring process without sacrificing quality? 
 
 Maintaing quality by considering the most optimistic assessment of their hiring potential. That is, among applicants with **the same predicted hiring potential** the exploration will give opportunity to applicants in the minorities.
 
 ### Data:
+
 The dataset is sourced from Kaggle.
 Link: https://www.kaggle.com/datasets/rabieelkharoua/predicting-hiring-decisions-in-recruitment-data
 
@@ -41,7 +48,7 @@ This dataset provides insights into factors influencing hiring decisions. Each r
 
 The imbalance in ethnicity within the dataset introduces a bias, disproportionately affecting minority groups' chances of being hired. This underrepresentation may lead the model to favor the majority group, ultimately reducing fairness in hiring predictions.
 
-#### Methodology
+### Methodology
 
 1. Set the baseline with Logistic Regression (LASSO)
 2. Analyze three resampling methods for balancing datasets
@@ -149,16 +156,20 @@ Finally The Confusion Matrix for each model shows the values for TP, FP and FN, 
 - There are balancing methods that could be tested such as Adaptive Synthetic Sampling (ADASYN) 
 - Include other minorities such as gender and age
 - One of the algorithms to try should be the Upper Confidence Bound - Bandit
+  
+    - Contextual bandit problems are originally motivated by applications in clinical trials (Woodroofe, 1979). When a standard treatment and a new treatment are available for a certain disease, the doctor needs to decide, in a sequetial manner, which of them to use based on the patient’s profiles such as age, general physical status or medicine history and picked back around 2012 on web search.
+      
+    - To implement an Upper Confidence Bound (UCB) contextual bandit model in a hiring process where the goal is to explore more opportunities for underrepresented groups (e.g., Black and Hispanic applicants), you can structure the model to take into account both the historical performance of hiring outcomes and the need for increased exploration for specific classes.
 - Since most ATS systems have the ML models at the beginning of the funnel, it would be interesting to run these models with a dataset of selection for interview, and track the people hired at end. 
 - Tunning the algorithms and research on some of the behaiviors such the the one for decision tress classification in the calibrarion graphic for SMOTE models
 
-#### Outline of project
+### Outline of project
 
 - Link to notebook [Hiring Opportunities](https://github.com/dbetancogith/hiring-opportunities/blob/main/capV12.ipynb)
 - Dataset [Dataset](https://www.kaggle.com/datasets/rabieelkharoua/predicting-hiring-decisions-in-recruitment-data)
 - Download the dataset [Download](https://github.com/dbetancogith/hiring-opportunities/blob/main/data/Job_Applicants_by_Ethnicity.csv)
 
-##### Contact and Further Information
+### Contact and Further Information
 
 Email: dariobz3071@gmail.com
 
